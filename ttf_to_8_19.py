@@ -77,7 +77,8 @@ example:
     print (font_height)
     usr_font = ImageFont.truetype(truetypefile, 16)
     with open(outfilename, 'wb') as outfile:
-        for i in range(0x41, 0x42):
+        # for i in range(0x41, 0x42):
+        for i in range(0x20, 0x100):
             # image = Image.new("RGB", (font_width, h), (255, 255, 255))
             image = Image.new("1", (font_width, font_height), (1))
             d_usr = ImageDraw.Draw(image)
